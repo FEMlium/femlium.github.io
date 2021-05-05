@@ -10,10 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Generate sphinx website
       uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: "pip3 -q install sphinx-material"
+        pre-build-command: |
+          apt-get -qq update && apt-get -qq install git
+          pip3 -q install sphinx-material
         docs-folder: .
     - name: Fix permissions
       run: |
