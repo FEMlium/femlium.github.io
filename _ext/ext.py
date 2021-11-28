@@ -160,11 +160,15 @@ def on_build_finished(app, exc):
         for num in tutorials.keys():
             for step_files in tutorials[num]["steps"].values():
                 for url in step_files.values():
-                    html_generated = subprocess.call(
+                    html_generated = subprocess.run(
                         "mkdir -p " + os.path.dirname(os.path.join(app.outdir, url)) + " && " +
-                        "git show origin/gh-pages:" + url + "> " + os.path.join(app.outdir, url) + " || " +
-                        "rm -f " + os.path.join(app.outdir, url),
-                        shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                        "git show origin/gh-pages:" + url + "> " + os.path.join(app.outdir, url),
+                        shell=True, capture_output=True)
+                    if html_generated.returncode != 0:
+                        raise RuntimeError(
+                            "HTML generation of " + url + " not found\n"
+                            + "stdout contains " + html_generated.stdout.decode() + "\n"
+                            + "stderr contains " + html_generated.stderr.decode() + "\n")
 
 
 create_sitemap_bak = sphinx_material.create_sitemap
