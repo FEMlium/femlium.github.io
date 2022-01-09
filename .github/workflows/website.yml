@@ -55,5 +55,5 @@ jobs:
       if: github.repository == 'FEMlium/femlium.github.io' && github.ref == 'refs/heads/main' && github.event_name == 'schedule'
       uses: fem-on-colab/warn-workflow-about-to-be-disabled-action@main
       with:
-        workflow-filename: ci.yml
+        workflow-filename: website.yml
         days-elapsed: 50
