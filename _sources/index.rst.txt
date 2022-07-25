@@ -3,7 +3,7 @@ FEMlium
 .. meta::
     :description lang=en:
         FEMlium is a library that enables visualizing finite element simulations on geographic maps using folium.
-        FEMlium is currently developed at Catholic University of the Sacred Heart by Dr. Francesco Ballarin.
+        FEMlium is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin.
 
 .. image:: _static/images/github-logo.png
     :target: https://github.com/FEMlium/FEMlium
@@ -32,7 +32,7 @@ Several finite element backends are supported, namely `dolfin <https://bitbucket
 Authors and contributors
 ------------------------
 
-**FEMlium** is currently developed and maintained at the `Catholic University of the Sacred Heart <https://www.unicatt.it/>`__ by `Dr. Francesco Ballarin <https://www.francescoballarin.it>`__.
+**FEMlium** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Dr. Francesco Ballarin <https://www.francescoballarin.it>`__.
 We acknowledge all contributors listed in the `AUTHORS file <https://github.com/FEMlium/FEMlium/blob/master/AUTHORS>`__.
 
 Timeline and funding
@@ -41,9 +41,9 @@ Timeline and funding
    :widths: 10 90
 
    * - 2021
-     - Early development of **FEMlium** begins at the `Catholic University of the Sacred Heart <https://www.unicatt.it/>`__.
+     - Early development of **FEMlium** begins at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__.
    * - 2021
-     - Financial support of the `ACCURATE project <https://asa.unicatt.it/asa-progetti-accurate>`__ (PI: `Prof. Maurizio Paolini <https://dmf.unicatt.it/~paolini/>`__, funding: D.3.2 project by the `Catholic University of the Sacred Heart <https://www.unicatt.it/>`__) in early **FEMlium** development.
+     - Financial support of the `ACCURATE project <https://asa.unicatt.it/asa-progetti-accurate>`__ (PI: `Prof. Maurizio Paolini <https://dmf.unicatt.it/~paolini/>`__, funding: D.3.2 project by `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__) in early **FEMlium** development.
 
 
 Learn more about FEMlium
