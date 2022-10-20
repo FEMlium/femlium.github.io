@@ -76,7 +76,7 @@ jobs:
       shell: bash
     - name: Deploy to GitHub artifacts
       if: github.repository == 'FEMlium/femlium.github.io' && github.ref != 'refs/heads/main'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: website
         path: _build/html
