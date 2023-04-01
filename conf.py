@@ -43,7 +43,7 @@ html_theme_options = {
     "nav_title": "FEMlium",
 
     # Set you GA account ID to enable tracking
-    "google_analytics_account": "UA-196193040-1",
+    "google_analytics_account": "G-ZJDHJP97HP",
 
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
