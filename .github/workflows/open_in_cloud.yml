@@ -68,7 +68,7 @@ jobs:
       fem_on_colab_packages: ${{ matrix.fem_on_colab_packages }}
       pip_packages: |
         meshio
-        viskex@https://github.com/viskex/viskex.git@current%femlium
+        viskex@https://github.com/viskex/viskex.git@current
         FEMlium@https://github.com/FEMlium/FEMlium.git@current$femlium
       test_script: |
         apt install -y -qq libgl1-mesa-glx xvfb
@@ -131,7 +131,7 @@ jobs:
       fem_on_kaggle_packages: ${{ matrix.fem_on_kaggle_packages }}
       pip_packages: |
         meshio
-        viskex@https://github.com/viskex/viskex.git@current%femlium
+        viskex@https://github.com/viskex/viskex.git@current
         FEMlium@https://github.com/FEMlium/FEMlium.git@current$femlium
       test_script: |
         apt install -y -qq libgl1-mesa-glx xvfb
