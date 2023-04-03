@@ -24,4 +24,4 @@ and install the package by typing
 
 .. code-block:: console
 
-    pip3 install .
+    python3 -m pip install .[tutorials]
