@@ -33,7 +33,7 @@ Authors and contributors
 ------------------------
 
 **FEMlium** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Dr. Francesco Ballarin <https://www.francescoballarin.it>`__.
-We acknowledge all contributors listed in the `AUTHORS file <https://github.com/FEMlium/FEMlium/blob/master/AUTHORS>`__.
+We acknowledge all contributors listed in the `AUTHORS file <https://github.com/FEMlium/FEMlium/blob/main/AUTHORS>`__.
 
 Timeline and funding
 ------------------------
