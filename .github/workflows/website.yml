@@ -31,6 +31,7 @@ jobs:
               export DEBIAN_FRONTEND="noninteractive"
               apt -y -qq update
               apt install -y -qq git python3-mpi4py python3-numpy python3-pip xorg
+              rm /usr/lib/python3.*/EXTERNALLY-MANAGED
             notebook_pattern: |
               "**/generate_mesh*.ipynb"
               "**/tutorial_*_meshio.ipynb"
