@@ -97,7 +97,9 @@ jobs:
       - name: Setup container
         run: ${{ matrix.setup_container }}
       - name: Install FEMlium
-        run: python3 -m pip install .[tutorials]
+        run: |
+          BACKEND=backend_${{ matrix.backend }}
+          python3 -m pip install .[${BACKEND},tutorials]
       - name: Install nbconvert and configure plotly
         run: |
           python3 -m pip -q install nbconvert
