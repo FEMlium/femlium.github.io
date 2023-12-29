@@ -24,4 +24,16 @@ and install the package by typing
 
 .. code-block:: console
 
-    python3 -m pip install .[tutorials]
+    cd FEMlium
+    python3 -m pip install '.[tutorials]'
+
+Compatibility with upstream releases
+------------------------------------
+
+The :code:`main` branch of **FEMlium** targets the :code:`main` branch of :code:`dolfinx` and :code:`firedrake`, which may contain API changes compared to the latest release of the finite element backend. A new **FEMlium** version is not necessarily tagged alongside :code:`dolfinx` or :code:`firedrake` releases. Users willing to work with a fixed release of the finite element backend are encouraged to look for a **FEMlium** `commit <https://github.com/FEMlium/FEMlium/commits/main>`__ close to the upstream release date, and do a
+
+.. code-block:: console
+
+    git checkout {commit SHA}
+
+before installing **FEMlium**.
