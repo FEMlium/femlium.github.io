@@ -24,4 +24,5 @@ and install the package by typing
 
 .. code-block:: console
 
-    python3 -m pip install .[tutorials]
+    cd FEMlium
+    python3 -m pip install '.[tutorials]'
