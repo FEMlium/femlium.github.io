@@ -34,7 +34,7 @@ jobs:
             setup_container: |
               export DEBIAN_FRONTEND="noninteractive"
               apt update -y -q
-              apt install -y -qq python3-mpi4py python3-numpy python3-pip xorg
+              apt install -y -qq python3-mpi4py python3-numpy python3-pip xorg xvfb
               rm /usr/lib/python3.*/EXTERNALLY-MANAGED
             notebook_pattern: |
               "**/generate_mesh*.ipynb"
@@ -43,27 +43,24 @@ jobs:
             container: numericalpdes/base_images:fenics
             setup_git: ""
             setup_container: |
-              export DEBIAN_FRONTEND="noninteractive"
               apt update -y -q
-              apt install -y -qq xorg
+              apt install -y -qq xvfb
             notebook_pattern: |
               "**/tutorial_*_dolfin.ipynb"
           - backend: dolfinx
             container: ghcr.io/fenics/dolfinx/dolfinx:nightly
             setup_git: ""
             setup_container: |
-              export DEBIAN_FRONTEND="noninteractive"
               apt update -y -q
-              apt install -y -qq libgl1-mesa-glx xvfb
+              apt install -y -qq xvfb
             notebook_pattern: |
               "**/tutorial_*_dolfinx.ipynb"
           - backend: firedrake
             container: firedrakeproject/firedrake
             setup_git: ""
             setup_container: |
-              export DEBIAN_FRONTEND="noninteractive"
               apt update -y -q
-              apt install -y -qq libgl1-mesa-glx xorg xvfb
+              apt install -y -qq xvfb
               echo "/home/firedrake/firedrake/bin" >> $GITHUB_PATH
             notebook_pattern: |
               "**/tutorial_*_firedrake.ipynb"
