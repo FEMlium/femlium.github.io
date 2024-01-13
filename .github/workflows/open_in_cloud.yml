@@ -31,7 +31,7 @@ jobs:
               "**/tutorial_*_meshio.ipynb"
           - backend: dolfin
             fem_on_colab_packages: |
-              fenics@current$dolfin
+              fenics==real@current$dolfin
             notebook_pattern: |
               "**/tutorial_*_dolfin.ipynb"
           - backend: dolfinx
@@ -90,7 +90,7 @@ jobs:
               "**/tutorial_*_meshio.ipynb"
           - backend: dolfin
             fem_on_kaggle_packages: |
-              fenics@current$dolfin
+              fenics==real@current$dolfin
             notebook_pattern: |
               "**/tutorial_*_dolfin.ipynb"
           - backend: dolfinx
