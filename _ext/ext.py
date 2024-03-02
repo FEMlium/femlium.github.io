@@ -152,7 +152,7 @@ def on_build_finished(app, exc):
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
   "name": "FEMlium - finite element simulations on geographic maps using folium",
-  "description": "FEMlium is a library that enables visualizing finite element simulations on geographic maps using folium. FEMlium is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin.",
+  "description": "FEMlium is a library that enables visualizing finite element simulations on geographic maps using folium. FEMlium is currently developed at Università Cattolica del Sacro Cuore by Prof. Francesco Ballarin.",
   "keywords": "FEMlium, folium, finite element, GIS, visualization",
   "softwareHelp": "https://femlium.github.io/",
   "operatingSystem": "Linux",
@@ -164,7 +164,7 @@ def on_build_finished(app, exc):
 </script>
 
 <meta property="og:title" content="FEMlium - finite element simulations on geographic maps using folium" />
-<meta property="og:description" content="FEMlium is a library that enables visualizing finite element simulations on geographic maps using folium. FEMlium is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin." />
+<meta property="og:description" content="FEMlium is a library that enables visualizing finite element simulations on geographic maps using folium. FEMlium is currently developed at Università Cattolica del Sacro Cuore by Prof. Francesco Ballarin." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="FEMlium" />
 <meta property="og:url" content="https://femlium.github.io/" />

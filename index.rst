@@ -3,7 +3,7 @@ FEMlium
 .. meta::
     :description lang=en:
         FEMlium is a library that enables visualizing finite element simulations on geographic maps using folium.
-        FEMlium is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin.
+        FEMlium is currently developed at Università Cattolica del Sacro Cuore by Prof. Francesco Ballarin.
 
 .. image:: _static/images/github-logo.png
     :target: https://github.com/FEMlium/FEMlium
@@ -32,7 +32,7 @@ Several finite element backends are supported, namely `dolfin <https://bitbucket
 Authors
 ------------------------
 
-**FEMlium** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Dr. Francesco Ballarin <https://www.francescoballarin.it>`__.
+**FEMlium** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Prof. Francesco Ballarin <https://www.francescoballarin.it>`__.
 
 Timeline and funding
 ------------------------
