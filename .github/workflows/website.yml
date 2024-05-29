@@ -53,7 +53,6 @@ jobs:
             setup_container: |
               apt update -y -q
               apt install -y -qq xvfb
-              rm /usr/lib/python3.*/EXTERNALLY-MANAGED
             notebook_pattern: |
               "**/tutorial_*_dolfinx.ipynb"
           - backend: firedrake
