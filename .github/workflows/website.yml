@@ -40,7 +40,7 @@ jobs:
               "**/generate_mesh*.ipynb"
               "**/tutorial_*_meshio.ipynb"
           - backend: dolfin
-            container: numericalpdes/base_images:fenics-real
+            container: ghcr.io/numericalpdes/fenics-real:latest
             setup_git: ""
             setup_container: |
               apt update -y -q
