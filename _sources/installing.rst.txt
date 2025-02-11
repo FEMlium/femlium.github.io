@@ -9,7 +9,7 @@ Prerequisites
 -------------
 
 Installation requirements are automatically handled during the setup.
-In order to run the tutorials you may need to install one of the supported finite element backends, namely `dolfin <https://bitbucket.org/fenics-project/dolfin>`__, `dolfinx <https://github.com/FEniCS/dolfinx>`__ and `firedrake <https://github.com/firedrakeproject/firedrake>`__.
+In order to run the tutorials you may need to install one of the supported finite element backends, namely `dolfinx <https://github.com/FEniCS/dolfinx>`__ and `firedrake <https://github.com/firedrakeproject/firedrake>`__.
 
 Installation and usage
 ----------------------
@@ -30,7 +30,7 @@ and install the package by typing
 Compatibility with upstream releases
 ------------------------------------
 
-The :code:`main` branch of **FEMlium** targets the :code:`main` branch of :code:`dolfin`, :code:`dolfinx` and :code:`firedrake`, which may contain API changes compared to the latest release of the finite element backend. A new **FEMlium** version is not necessarily tagged alongside :code:`dolfin`, :code:`dolfinx` or :code:`firedrake` releases. Users willing to work with a fixed release of the finite element backend are encouraged to look for a **FEMlium** `commit <https://github.com/FEMlium/FEMlium/commits/main>`__ close to the upstream release date, and do a
+The :code:`main` branch of **FEMlium** targets the :code:`main` branch of :code:`dolfinx` and :code:`firedrake`, which may contain API changes compared to the latest release of the finite element backend. A new **FEMlium** version is not necessarily tagged alongside :code:`dolfinx` or :code:`firedrake` releases. Users willing to work with a fixed release of the finite element backend are encouraged to look for a **FEMlium** `commit <https://github.com/FEMlium/FEMlium/commits/main>`__ close to the upstream release date, and do a
 
 .. code-block:: console
 
