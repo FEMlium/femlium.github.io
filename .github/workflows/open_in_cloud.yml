@@ -29,11 +29,6 @@ jobs:
             notebook_pattern: |
               "**/generate_mesh*.ipynb"
               "**/tutorial_*_meshio.ipynb"
-          - backend: dolfin
-            fem_on_colab_packages: |
-              fenics==real@current$dolfin
-            notebook_pattern: |
-              "**/tutorial_*_dolfin.ipynb"
           - backend: dolfinx
             fem_on_colab_packages: |
               gmsh@current%dolfinx.io
@@ -88,11 +83,6 @@ jobs:
             notebook_pattern: |
               "**/generate_mesh*.ipynb"
               "**/tutorial_*_meshio.ipynb"
-          - backend: dolfin
-            fem_on_kaggle_packages: |
-              fenics==real@current$dolfin
-            notebook_pattern: |
-              "**/tutorial_*_dolfin.ipynb"
           - backend: dolfinx
             fem_on_kaggle_packages: |
               gmsh@current%dolfinx.io

@@ -27,7 +27,7 @@ Description
     :alt: FEMlium
 
 **FEMlium** is a library that enables visualizing finite element simulations on geographic maps using **folium**.
-Several finite element backends are supported, namely `dolfin <https://bitbucket.org/fenics-project/dolfin>`__, `dolfinx <https://github.com/FEniCS/dolfinx>`__ and `firedrake <https://github.com/firedrakeproject/firedrake>`__.
+Supported finite element backends are `dolfinx <https://github.com/FEniCS/dolfinx>`__ and `firedrake <https://github.com/firedrakeproject/firedrake>`__.
 
 Authors
 ------------------------

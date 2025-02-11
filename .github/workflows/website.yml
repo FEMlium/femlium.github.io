@@ -39,14 +39,6 @@ jobs:
             notebook_pattern: |
               "**/generate_mesh*.ipynb"
               "**/tutorial_*_meshio.ipynb"
-          - backend: dolfin
-            container: ghcr.io/numericalpdes/fenics-real:latest
-            setup_git: ""
-            setup_container: |
-              apt update -y -q
-              apt install -y -qq xvfb
-            notebook_pattern: |
-              "**/tutorial_*_dolfin.ipynb"
           - backend: dolfinx
             container: ghcr.io/fenics/dolfinx/dolfinx:nightly
             setup_git: ""

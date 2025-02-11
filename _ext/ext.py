@@ -109,9 +109,7 @@ class Tutorials(Directive):
 
     @staticmethod
     def _library_image(library):
-        if library == "dolfin":
-            logo = "_static/images/dolfin-logo.png"
-        elif library == "dolfinx":
+        if library == "dolfinx":
             logo = "_static/images/dolfinx-logo.png"
         elif library == "firedrake":
             logo = "_static/images/firedrake-logo.png"
