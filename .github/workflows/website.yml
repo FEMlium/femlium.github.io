@@ -27,40 +27,25 @@ jobs:
         include:
           - backend: none
             container: debian:testing
-            setup_git: |
-              export DEBIAN_FRONTEND="noninteractive"
-              apt update -y -q
-              apt install -y -qq git
-            setup_container: |
-              export DEBIAN_FRONTEND="noninteractive"
-              apt update -y -q
-              apt install -y -qq python3-mpi4py python3-numpy python3-pip xorg xvfb
-              rm /usr/lib/python3.*/EXTERNALLY-MANAGED
             notebook_pattern: |
               "**/generate_mesh*.ipynb"
               "**/tutorial_*_meshio.ipynb"
-          - backend: dolfinx
+          - backend: dolfinx-nightly
             container: ghcr.io/fenics/dolfinx/dolfinx:nightly
-            setup_git: ""
-            setup_container: |
-              apt update -y -q
-              apt install -y -qq xvfb
             notebook_pattern: |
               "**/tutorial_*_dolfinx.ipynb"
-          - backend: firedrake
+          - backend: firedrake-nightly
             container: firedrakeproject/firedrake-vanilla-default
-            setup_git: ""
-            setup_container: |
-              apt update -y -q
-              apt install -y -qq xvfb
-              rm /usr/lib/python3.*/EXTERNALLY-MANAGED
             notebook_pattern: |
               "**/tutorial_*_firedrake.ipynb"
       fail-fast: false
     container: ${{ matrix.container }}
     steps:
       - name: Setup git
-        run: ${{ matrix.setup_git }}
+        run: |
+          export DEBIAN_FRONTEND="noninteractive"
+          apt update -y -q
+          apt install -y -qq git
       - name: Determine which branch to checkout when cloning source repository
         id: source_branch
         run: |
@@ -82,11 +67,29 @@ jobs:
           fetch-depth: 0
           path: _website
       - name: Setup container
-        run: ${{ matrix.setup_container }}
+        run: |
+          export DEBIAN_FRONTEND="noninteractive"
+          apt update -y -q
+          apt install -y -qq rsync xvfb
+          if [[ "${{ matrix.backend }}" == "dolfinx"* ]]; then
+            :
+          elif [[ "${{ matrix.backend }}" == "firedrake"* ]]; then
+            apt install -y -qq xorg
+            rm /usr/lib/python3.*/EXTERNALLY-MANAGED
+          else
+            apt install -y -qq python3-mpi4py python3-numpy python3-pip xorg
+            rm /usr/lib/python3.*/EXTERNALLY-MANAGED
+          fi
+        shell: bash
       - name: Install FEMlium
         run: |
-          BACKEND=backend_${{ matrix.backend }}
-          python3 -m pip install .[${BACKEND},tutorials]
+          if [[ "${{ matrix.backend }}" == "dolfinx"* ]]; then
+            python3 -m pip install .[backend_dolfinx,tutorials]
+          elif [[ "${{ matrix.backend }}" == "firedrake"* ]]; then
+            python3 -m pip install .[backend_firedrake,tutorials]
+          else
+            python3 -m pip install .[tutorials]
+          fi
       - name: Install nbconvert
         run: |
           python3 -m pip install -q nbconvert
