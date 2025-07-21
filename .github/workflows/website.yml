@@ -84,9 +84,9 @@ jobs:
       - name: Install FEMlium
         run: |
           if [[ "${{ matrix.backend }}" == "dolfinx"* ]]; then
-            python3 -m pip install .[backend_dolfinx,tutorials]
+            python3 -m pip install .[backend-dolfinx,tutorials]
           elif [[ "${{ matrix.backend }}" == "firedrake"* ]]; then
-            python3 -m pip install .[backend_firedrake,tutorials]
+            python3 -m pip install .[backend-firedrake,tutorials]
           else
             python3 -m pip install .[tutorials]
           fi
