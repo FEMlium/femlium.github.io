@@ -62,9 +62,6 @@ jobs:
         viskex
         FEMlium@https://github.com/FEMlium/FEMlium.git@current$femlium
       test_script: |
-        apt install -y -qq xvfb
-        export DISPLAY=":99"
-        Xvfb $DISPLAY -screen 0 1024x768x24 > /dev/null 2>&1 &
         NOTEBOOKS_TO_TEST=""
         while read -r PATTERN; do
           NOTEBOOKS_TO_TEST="${NOTEBOOKS_TO_TEST} $(find open_in_colab -wholename $(echo ${PATTERN} | sed 's|\"||g'))"
@@ -116,9 +113,6 @@ jobs:
         viskex
         FEMlium@https://github.com/FEMlium/FEMlium.git@current$femlium
       test_script: |
-        apt install -y -qq xvfb
-        export DISPLAY=":99"
-        Xvfb $DISPLAY -screen 0 1024x768x24 > /dev/null 2>&1 &
         NOTEBOOKS_TO_TEST=""
         while read -r PATTERN; do
           NOTEBOOKS_TO_TEST="${NOTEBOOKS_TO_TEST} $(find open_in_kaggle -wholename $(echo ${PATTERN} | sed 's|\"||g'))"
