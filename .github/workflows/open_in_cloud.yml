@@ -43,6 +43,7 @@ jobs:
       fail-fast: false
     uses: fem-on-colab/open-in-colab-workflow/.github/workflows/workflow_call.yml@main
     with:
+      source_directory: website_source_not_used
       work_directory: open_in_colab
       notebook_pattern: ${{ matrix.notebook_pattern }}
       notebook_preparation: |
@@ -94,6 +95,7 @@ jobs:
       fail-fast: false
     uses: fem-on-kaggle/open-in-kaggle-workflow/.github/workflows/workflow_call.yml@main
     with:
+      source_directory: website_source_not_used
       work_directory: open_in_kaggle
       notebook_pattern: ${{ matrix.notebook_pattern }}
       notebook_preparation: |
